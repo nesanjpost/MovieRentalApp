@@ -1,0 +1,77 @@
+<!-- <ul>
+    <li *ngFor="let cartItem of cart.items">
+        <img [src] = "cartItem.movie.imageUrl" [alt]="cartItem.movie.name">
+    </li>
+</ul> -->
+
+<div class="container">
+    
+    <!-- <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Movie Image</th>
+            <th scope="col">Movie Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr *ngFor="let cartItem of cart.items">
+                <td><img [src]="cartItem.movie.imageUrl" [alt]="cartItem.movie.name"></td>
+                <td><a routerLink="/movie/{{cartItem.movie.id}}">
+                    {{cartItem.movie.name}}
+                </a></td>
+                <td>{{cartItem.price | currency }}</td>
+                <td><button class="btn btn-danger remove-button" (click)="removeFromCart(cartItem)">Remove</button></td>
+              </tr>
+         
+        </tbody>
+      </table> -->
+
+    <ul class="col-9">
+        <h2>Rent Cart</h2>
+        <li *ngFor="let cartItem of cart.items">
+
+            <div>
+                <img [src]="cartItem.movie.imageUrl" [alt]="cartItem.movie.name">
+            </div>
+
+            <div class="movieName">
+
+                <a routerLink="/movie/{{cartItem.movie.id}}">
+                    {{cartItem.movie.name}}
+                </a>
+            </div>
+
+                <div>
+                    {{cartItem.price | currency }}/ Month
+                </div>
+
+                <div>
+                    <button class="btn remove-button" (click)="removeFromCart(cartItem)"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+
+        </li>
+    </ul>
+    <div class="checkout">
+
+<div class="movies-count">
+{{cart.items.length}}
+</div>
+<div class="total-price">
+{{cart.totalPrice | currency}} 
+</div>
+<div>
+    <a routerLink="'/checkout'">Buy on Rent</a>
+</div>
+    </div>
+</div>
+
+
+<!-- <div class="card" style="width: 15rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{cart.items.length}}</li>
+      <li class="list-group-item item">{{cart.totalPrice | currency}}</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul> -->

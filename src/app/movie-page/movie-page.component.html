@@ -1,0 +1,85 @@
+<!-- <div class="container">
+    <img [src]='movie.imageUrl' [alt]="movie.name">
+</div> -->
+
+<!-- <div class="container">
+    <img [src]='movie2.imageUrl' [alt]="movie2.name">
+</div> -->
+
+<!-- <div class="container d-flex justify-content-between">
+    <div class="card" style="width: 20rem;">
+        <img [src]='movie.imageUrl' [alt]="movie.name">
+      </div>
+    
+     <div class="description">
+        <div class="card-body bg-dark">
+            <h5 class="card-title text-center">{{movie.name}}</h5>
+            <p class="card-text">{{movie.description}}</p>
+          
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                🕒 {{movie.movieDuration}}</li>
+            <li class="list-group-item">{{movie.origins}}</li>
+            <li class="list-group-item">{{movie.tags}}</li>
+            <li class="list-group-item">{{movie.star}}</li>
+            <li class="list-group-item">{{movie.price|currency}}</li>
+            <li class="list-group-item"></li>
+          </ul>
+          <div class=" btn d-flex justify-content-center">
+            <a class="card-link" (click)="addToCart()">Add to Cart</a>
+     </div>
+        </div>
+</div> -->
+
+
+<!-- id: 10,
+      price:18,
+      name:"Vikram (2022)",
+      favorite: false,
+      star: 4.6,
+      imageUrl: '/assets/image-3.avif',
+      movieDuration: '2:53',
+      origins: ["Raaj kamal Films International"],
+      tags: ['Action', 'Mystery'], -->
+
+     
+
+      <section id="create-section" class="text-muted py-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 img-class">
+                    <img [src]='movie.imageUrl' [alt]="movie.name" class="img w-100 h-100"/>
+                </div>
+
+                <div class="col-md-8 text-light description">
+                    <h3>{{movie.name}}</h3>
+                    <p>
+                        {{movie.description}}
+                    </p>
+                    <div class=" ">
+                    
+                        <div class="p-1 ">
+                            🕒 {{movie.movieDuration}}
+                        </div>
+                        <div class="p-1 ">
+                            <span>Origins: </span>{{movie.origins}}
+                        </div>
+                        <div class="p-1 ">
+                          <span>Rate: </span>{{movie.star}}
+                        </div>
+                        <div class="p-1 ">
+                            <span>Price: </span>{{movie.price|currency}} / Month
+                        </div>
+                    </div>
+                    <div class="btn">
+                      <a class="card-link" (click)="addToCart()">Add to Cart</a>
+               </div>
+                   
+                </div>  
+            </div>
+        </div>
+    </section>
+    
+
+    

@@ -1,0 +1,125 @@
+<!-- <div class="container">
+ 
+    <div class="row">
+      <div class="col">
+       
+        <div class="card" style="width: 18rem ;">
+            <img src="/assets/images/image-7.jpg" style="width:285px;height:150px;" class="card-img-full" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><i>Ajay Devgun Starrer</i></h5>
+              <p class="card-text"><i>A pilot's flight takes a stirring and mysterious trajectory after taking off from an international destination.</i></p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+          <br>
+          <div class="card" style="width: 18rem ;">
+            <img src="/assets/images/post-2.png"  style="width:285px;height:150px;" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><i>Kangana Ranaut Starrer</i></h5>
+              <p class="card-text"><i>Avni, a highly trained and deadly field agent ,is entrusted with a mission to gather Inteligence.</i></p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+          <br>
+          <div class="card" style="width: 18rem;">
+            <img src="/assets/images/post-3.png" style="width:285px;height:150px;" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><i>Allu Arjun Starrer</i></h5>
+              <p class="card-text"><i>A labourer named Pushpa makes enemies as he rises in the world of red sandalwood smuggling.</i></p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+      </div>
+      <br>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="/assets/images/post-4.png" style="width:285px;height:150px;"class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><i>Tobey Magquire Starrer</i></h5>
+              <p class="card-text"><i>Peter Parker seeks Doctor Strange's help to make people forget about Spiderman's identity.</i></p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+          <br>
+          <div class="card" style="width: 18rem;">
+            <img src="/assets/images/image-5.jpg" style="width:285px;height:150px;" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><i>Elsa Pataky Starrer</i></h5>
+             <p class="card-text">One Army captain is forced use her years of tactical training and military expertise </p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+          <br>
+          <div class="card" style="width: 18rem;">
+            <img src="/assets/images/drstrange.jpg" style="width:285px;height:150px;" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><i>Benedict Cumberbatch Starrer</i></h5>
+              <p class="card-text"><i>Dr Stephen Strange casts a forbidden spell that opens a portal to the multiverse.</i></p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+      </div>
+      <br>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="/assets/images/munnabhai.jpeg"  style="width:285px;height:150px;" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><i>Sanjay Dutt Starrer</i></h5>
+              <p class="card-text"><i>Munna is a goon who sets out to fulfil his father's dream of becoming a doctor.</i></p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+          <br>
+          <div class="card" style="width: 18rem;">
+            <img src="/assets/images/3idiots.jpeg" style="width:285px;height:150px;" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><i>Aamir Khan Starrer</i></h5>
+              <p class="card-text"><i>In college, Farhan and Raju form a great bond with Rancho due to his refreshing outlook. .</i></p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+          <br>
+          <div class="card" style="width: 18rem;">
+            <img src="/assets/images/kabirsingh.jpeg" style="width:285px;height:150px;" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><i>Shahid Kapoor Starrer</i></h5>
+              <p class="card-text"><i>Kabir, a genius yet hostile medical student, falls in love with Preeti from his college. </i></p>
+              <a href="#" class="btn btn-primary ">Add to Cart</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div> -->
+  
+    <div class="main">
+      
+    <ul>
+        <li *ngFor = "let movie of movies">
+            <a routerLink="/movie/{{movie.id}}">
+                <img src="{{movie.imageUrl}}" alt=" movie images"> 
+            </a>
+                <div class="content">
+
+                    <div class="name">
+                        {{movie.name}}
+                        
+                    </div>
+
+                    <div class="price">
+                        {{movie.price|currency}} 
+                    </div>
+
+                    <div class="tags">
+                        {{movie.tags}} 
+                    </div>
+
+                    <button class="cart-btn" (click)="addToCart(movie)">Add to Cart</button>
+    
+                    <span class="favorite {{movie.favorite?'':'not'}}"></span>
+                  
+                </div>
+         
+        </li>
+    </ul>
+</div>
+    
